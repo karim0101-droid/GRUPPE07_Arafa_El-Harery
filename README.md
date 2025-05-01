@@ -55,13 +55,31 @@ Wenn du noch keinen Branch erstellt hast, erstelle einen und ändere "new-branch
 git checkout -b new-branch-name
 ```
 
+### 5. Dependecies herunterladen
 
-### 5. Workspace einrichten und builden
+1. Installiere fehlende ROS-Controller
+
+Stelle sicher, dass du folgendes Paket installiert hast:
+```bash
+sudo apt install ros-noetic-ros-controllers
+```
+
+Dieses Paket enthält JointTrajectoryController und weitere wichtige Controller-Plugins.
+
+2. Kontrolliere die Controller-Plugins im System
+
+Du kannst prüfen, welche Controller verfügbar sind mit:
+```bash
+rosservice call /controller_manager/list_controller_types
+```
+
+### 6. Workspace einrichten und builden
 
 
 Wechsle in den Workspace und führe den Build aus:
 ```bash
 cd ~/GRUPPE07_Arafa_El-Harery
+catkin init
 catkin build
 ```
 
