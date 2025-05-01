@@ -1,6 +1,6 @@
-devel_space: /home/karim/Dokumente/MRE/MRE2/ROD/GRUPPE07_Arafa_El-Harery/devel
+devel_space: /home/karim/GRUPPE07_Arafa_El-Harery/devel
 install: false
-install_space: /home/karim/Dokumente/MRE/MRE2/ROD/GRUPPE07_Arafa_El-Harery/install
+install_space: /home/karim/GRUPPE07_Arafa_El-Harery/install
 profile: default
-source_space: /home/karim/Dokumente/MRE/MRE2/ROD/GRUPPE07_Arafa_El-Harery/src
-workspace: /home/karim/Dokumente/MRE/MRE2/ROD/GRUPPE07_Arafa_El-Harery
+source_space: /home/karim/GRUPPE07_Arafa_El-Harery/src
+workspace: /home/karim/GRUPPE07_Arafa_El-Harery

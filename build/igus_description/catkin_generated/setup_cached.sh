@@ -7,7 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/karim/Dokumente/MRE/MRE2/ROD/GRUPPE07_Arafa_El-Harery/devel/.private/igus_description:$CMAKE_PREFIX_PATH"
-export PWD='/home/karim/Dokumente/MRE/MRE2/ROD/GRUPPE07_Arafa_El-Harery/build/igus_description'
-export ROSLISP_PACKAGE_DIRECTORIES="/home/karim/Dokumente/MRE/MRE2/ROD/GRUPPE07_Arafa_El-Harery/devel/.private/igus_description/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/karim/Dokumente/MRE/MRE2/ROD/GRUPPE07_Arafa_El-Harery/src/igus_description:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/home/karim/GRUPPE07_Arafa_El-Harery/devel/.private/igus_description:$CMAKE_PREFIX_PATH"
+export PWD='/home/karim/GRUPPE07_Arafa_El-Harery/build/igus_description'
+export ROSLISP_PACKAGE_DIRECTORIES="/home/karim/GRUPPE07_Arafa_El-Harery/devel/.private/igus_description/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/karim/GRUPPE07_Arafa_El-Harery/src/igus_description:$ROS_PACKAGE_PATH"

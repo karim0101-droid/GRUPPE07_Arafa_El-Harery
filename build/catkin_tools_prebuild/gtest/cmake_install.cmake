@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/karim/Dokumente/MRE/MRE2/ROD/GRUPPE07_Arafa_El-Harery/install")
+  set(CMAKE_INSTALL_PREFIX "/home/karim/GRUPPE07_Arafa_El-Harery/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/karim/Dokumente/MRE/MRE2/ROD/GRUPPE07_Arafa_El-Harery/build/catkin_tools_prebuild/gtest/googlemock/cmake_install.cmake")
+  include("/home/karim/GRUPPE07_Arafa_El-Harery/build/catkin_tools_prebuild/gtest/googlemock/cmake_install.cmake")
 
 endif()
 
