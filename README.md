@@ -56,10 +56,10 @@ git checkout -b new-branch-name
 ```
 
 
-🛠️ Workspace einrichten und builden
+### 5. Workspace einrichten und builden
 
 
-Wechsle in den Workspace (z. B. GRUPPE07_Arafa_El-Harery) und führe den Build aus:
+Wechsle in den Workspace und führe den Build aus:
 ```bash
 cd ~/GRUPPE07_Arafa_El-Harery
 catkin build
