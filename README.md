@@ -1,6 +1,7 @@
 # ROD_Project
 
 Dieses Repository enthält die Beschreibungspakete für das ROD-Projekt. Es ist für die Verwendung in einer ROS-Umgebung (z. B. mit ROS Noetic) ausgelegt.
+Hinweis: Wenn etwas im README nicht angeführt wird, bitte hinzufügen @Sameh!
 
 ---
 
@@ -16,8 +17,9 @@ ssh-keygen -t ed25519 -C "deine.email@example.com"
 
 2. Public Key anzeigen und kopieren
 
+```bash
 cat ~/.ssh/id_ed25519.pub
-
+```
 ### 3. SSH-Key zu GitHub hinzufügen
 
   Öffne 
@@ -41,7 +43,21 @@ git clone git@github.com:karim0101-droid/ROD_Project.git
 ```
   Hinweis: Stelle sicher, dass du SSH-Zugriff hast – siehe oben.
 
+
+🌿 Im jeweiligen Branch arbeiten
+
+Wechsle in deinen Branch und ändere dabei "branch-name" zu deinem jeweiligen Branch:
+```bash
+git checkout branch-name
+```
+Wenn du noch keinen Branch erstellt hast, erstelle einen und ändere "new-branch-name" zu deinem jeweiligen Branch:
+```bash
+git checkout -b new-branch-name
+```
+
+
 🛠️ Workspace einrichten und builden
+
 
 Wechsle in den Workspace (z. B. GRUPPE07_Arafa_El-Harery) und führe den Build aus:
 ```bash
