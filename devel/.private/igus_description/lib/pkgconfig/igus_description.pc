@@ -1,8 +1,0 @@
-prefix=/home/karim/GRUPPE07_Arafa_El-Harery/devel/.private/igus_description
-
-Name: igus_description
-Description: Description of igus_description
-Version: 1.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: geometry_msgs roscpp rospy std_msgs

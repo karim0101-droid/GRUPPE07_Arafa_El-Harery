@@ -1,1 +1,0 @@
-/home/karim/GRUPPE07_Arafa_El-Harery/devel/.private/catkin_tools_prebuild/local_setup.bash

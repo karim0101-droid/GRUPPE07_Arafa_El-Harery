@@ -1,2 +1,0 @@
-/home/karim/Dokumente/MRE/MRE2/ROD/GRUPPE07_Arafa_El-Harery/devel/./cmake.lock 5
-/home/karim/GRUPPE07_Arafa_El-Harery/devel/./cmake.lock 8
