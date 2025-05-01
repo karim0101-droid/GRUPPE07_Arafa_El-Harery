@@ -15,7 +15,7 @@ Falls du das Repository via SSH klonen möchtest (anstatt per HTTPS), richte zun
 ssh-keygen -t ed25519 -C "deine.email@example.com"
 ```
 
-2. Public Key anzeigen und kopieren
+### 2. Public Key anzeigen und kopieren
 
 ```bash
 cat ~/.ssh/id_ed25519.pub
@@ -36,7 +36,7 @@ cat ~/.ssh/id_ed25519.pub
 ```bash
 ssh -T git@github.com
 ```
-📥 Repository klonen
+## 📥 Repository klonen
 
 ```bash
 git clone git@github.com:karim0101-droid/ROD_Project.git
@@ -44,7 +44,7 @@ git clone git@github.com:karim0101-droid/ROD_Project.git
   Hinweis: Stelle sicher, dass du SSH-Zugriff hast – siehe oben.
 
 
-🌿 Im jeweiligen Branch arbeiten
+## 🌿 Im jeweiligen Branch arbeiten
 
 Wechsle in deinen Branch und ändere dabei "branch-name" zu deinem jeweiligen Branch:
 ```bash
@@ -55,7 +55,7 @@ Wenn du noch keinen Branch erstellt hast, erstelle einen und ändere "new-branch
 git checkout -b new-branch-name
 ```
 
-### 5. Dependecies herunterladen
+## 5. Dependecies herunterladen
 
 1. Installiere fehlende ROS-Controller
 
@@ -78,7 +78,7 @@ Stelle außerdem sicher, dass du alles rund um MoveIt heruntergeladen hast:
 sudo apt install ros-noetic-moveit*
 ```
 
-### 6. Workspace einrichten und builden
+## 6. Workspace einrichten und builden
 
 
 Wechsle in den Workspace und führe den Build aus:
@@ -89,7 +89,7 @@ catkin build
 ```
 
 
-📡 Workspace automatisch sourcen
+### 📡 Workspace automatisch sourcen
 
 Öffne ".bashrc" mit:
 ```bash
