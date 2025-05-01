@@ -1,4 +1,4 @@
-# ROD_Project
+# ROD_Project SETUP
 
 Dieses Repository enthält die Beschreibungspakete für das ROD-Projekt. Es ist für die Verwendung in einer ROS-Umgebung (z. B. mit ROS Noetic) ausgelegt.
 Hinweis: Wenn etwas im README nicht angeführt wird, bitte hinzufügen @Sameh!
