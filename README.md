@@ -86,10 +86,17 @@ catkin build
 
 📡 Workspace automatisch sourcen
 
+Öffne ".bashrc" mit:
+```bash
+nano ~/.bashrc
+```
+
 Damit dein Workspace bei jedem Terminalstart verfügbar ist, füge Folgendes zu deiner ~/.bashrc hinzu:
 ```bash
 source ~/GRUPPE07_Arafa_El-Harery/devel/setup.bash
 ```
+,falls dies nicht funktioniert, bitte den gesamten Pfad angeben und zum Speichern STRG+X -> J -> Enter drücken!
+
 Danach einmal neu laden oder Terminal neustarten:
 ```bash
 source ~/.bashrc
