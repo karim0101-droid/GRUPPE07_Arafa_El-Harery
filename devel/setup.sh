@@ -1,0 +1,1 @@
+/home/karim/Dokumente/MRE/MRE2/ROD/GRUPPE07_Arafa_El-Harery/devel/.private/catkin_tools_prebuild/setup.sh
