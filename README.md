@@ -73,6 +73,11 @@ Du kannst prüfen, welche Controller verfügbar sind mit:
 rosservice call /controller_manager/list_controller_types
 ```
 
+Stelle außerdem sicher, dass du alles rund um MoveIt heruntergeladen hast:
+```bash
+sudo apt install ros-noetic-moveit*
+```
+
 ### 6. Workspace einrichten und builden
 
 
