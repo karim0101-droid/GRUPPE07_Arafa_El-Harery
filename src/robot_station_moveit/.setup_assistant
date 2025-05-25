@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: robot_station
+    relative_path: urdf/robot_station.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/robot_station.srdf
+  CONFIG:
+    author_name: Karim El-Harery
+    author_email: karim.elharery.privat@gmail.com
+    generated_timestamp: 1748097657

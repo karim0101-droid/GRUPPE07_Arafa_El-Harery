@@ -1,0 +1,39 @@
+controller_list:
+  - name: igus_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - igus_joint_1
+      - igus_joint_2
+      - igus_joint_3
+      - igus_joint_4
+      - igus_joint_5
+  - name: fanuc_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - fanuc_joint_1
+      - fanuc_joint_2
+      - fanuc_joint_3
+      - fanuc_joint_4
+      - fanuc_joint_5
+  - name: rim_1_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - rim_joint_1
+  - name: rim_2_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - rim_joint_2
+  - name: rim_3_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - rim_joint_3
