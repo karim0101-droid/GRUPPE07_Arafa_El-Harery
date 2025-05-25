@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter package://robot_station -->
+<robot name="robot_station">
+    <link name="world">
+    </link>
+    <joint name="FixedLinkToWorld" type="fixed">
+        <parent link="world"/>
+        <child link="base_link"/>
+    </joint>
+    <link name="base_link">
+        <!--<inertial>
+            <origin xyz="-0.000356782192564825 1.00041120801292 0.316158264100032" rpy="0 0 0" />
+            <mass value="636.570243494494" />
+            <inertia ixx="333.952847373746" ixy="0.00886631819492119" ixz="-0.0375757920254293" iyy="16.095679030991" iyz="-0.281796179976567" izz="328.424527454803" />
+        </inertial>-->
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/base_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/base_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="fanuc_base_link">
+        <inertial>
+            <origin xyz="0.000169082888211936 0 0.383648714459086" rpy="0 0 0" />
+            <mass value="97.8070588625278" />
+            <inertia ixx="5.92235895368374" ixy="1.67237191715929E-16" ixz="6.68329434467964E-05" iyy="5.46236784622898" iyz="8.58528606485017E-17" izz="2.09533750614609" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/fanuc_base_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/fanuc_base_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="fanuc_base_joint" type="fixed">
+        <origin xyz="-1.08369527529852 2.19465113483782 0" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="fanuc_base_link" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <link name="fanuc_link_1">
+        <inertial>
+            <origin xyz="-2.63059554139744E-08 0.0156064943757653 0.10888280407484" rpy="0 0 0" />
+            <mass value="2.40695028399239" />
+            <inertia ixx="0.0110961559173426" ixy="-3.09808436574582E-09" ixz="1.57497353428753E-09" iyy="0.00928441912751741" iyz="-0.00132265032616368" izz="0.00556032046198518" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/fanuc_link_1.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/fanuc_link_1.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="fanuc_joint_1" type="revolute">
+        <origin xyz="0 0 0.875" rpy="0 0 0" />
+        <parent link="fanuc_base_link" />
+        <child link="fanuc_link_1" />
+        <axis xyz="0 0 1" />
+        <limit lower="-3.14" upper="3.14" effort="30" velocity="5" />
+        <dynamics damping="1" friction="0.3" />
+    </joint>
+    <link name="fanuc_link_2">
+        <inertial>
+            <origin xyz="1.06587264325775E-06 -0.299118880733382 0.0672828882962292" rpy="0 0 0" />
+            <mass value="6.33754550396934" />
+            <inertia ixx="0.30540090334403" ixy="1.01759238610271E-07" ixz="-3.94988933316654E-09" iyy="0.00998243581493844" iyz="-0.000298340857520885" izz="0.304003738022916" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/fanuc_link_2.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/fanuc_link_2.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="fanuc_joint_2" type="revolute">
+        <origin xyz="0 0.1 0.145" rpy="-1.5707963267949 0 0" />
+        <parent link="fanuc_link_1" />
+        <child link="fanuc_link_2" />
+        <axis xyz="0 0 1" />
+        <limit lower="-3.14" upper="3.14" effort="30" velocity="5" />
+        <dynamics damping="1" friction="0.3" />
+    </joint>
+    <link name="fanuc_link_3">
+        <inertial>
+            <origin xyz="0.17728326847111 2.79403544412027E-07 -0.0528316517988267" rpy="0 0 0" />
+            <mass value="2.49581709137831" />
+            <inertia ixx="0.00247052610771185" ixy="-5.78496815489382E-08" ixz="-0.000449504431272903" iyy="0.0179816396092495" iyz="-5.48956960543343E-08" izz="0.0177106962681387" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/fanuc_link_3.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/fanuc_link_3.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="fanuc_joint_3" type="revolute">
+        <origin xyz="0 -0.6 0" rpy="0 0 0" />
+        <parent link="fanuc_link_2" />
+        <child link="fanuc_link_3" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-3.14" upper="3.14" effort="30" velocity="5" />
+        <dynamics damping="1" friction="0.3" />
+    </joint>
+    <link name="fanuc_link_4">
+        <inertial>
+            <origin xyz="1.84762835031549E-08 0.0193331248667047 0.0339158242493295" rpy="0 0 0" />
+            <mass value="0.314010019704223" />
+            <inertia ixx="0.000329115741200632" ixy="2.77060224939971E-10" ixz="4.53935019208746E-10" iyy="0.000170116213329556" iyz="-8.31864792928003E-06" izz="0.000302831187717306" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/fanuc_link_4.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/fanuc_link_4.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="fanuc_joint_4" type="revolute">
+        <origin xyz="0.44 0 0.0100000000000011" rpy="0 0 0" />
+        <parent link="fanuc_link_3" />
+        <child link="fanuc_link_4" />
+        <axis xyz="0 0 1" />
+        <limit lower="-3.14" upper="3.14" effort="30" velocity="5" />
+        <dynamics damping="1" friction="0.3" />
+    </joint>
+    <link name="fanuc_link_5">
+        <inertial>
+            <origin xyz="1.11022302462516E-16 -1.11022302462516E-16 -0.02" rpy="0 0 0" />
+            <mass value="0.113097335529233" />
+            <inertia ixx="4.05265452313084E-05" ixy="-2.63310734584192E-36" ixz="-3.34359903136556E-22" iyy="4.05265452313084E-05" iyz="-7.42167075397559E-21" izz="5.08938009881547E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/fanuc_link_5.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/fanuc_link_5.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="fanuc_joint_5" type="revolute">
+        <origin xyz="0 0.0700000000000001 0.0350000000000002" rpy="1.5707963267949 0 0" />
+        <parent link="fanuc_link_4" />
+        <child link="fanuc_link_5" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-3.14" upper="3.14" effort="30" velocity="5" />
+        <dynamics damping="1" friction="0.3" />
+    </joint>
+    <link name="fanuc_tcp_link">
+        <inertial>
+            <origin xyz="-1.11022302462516E-16 0 -0.167252687991617" rpy="0 0 0" />
+            <mass value="0.122101489927734" />
+            <inertia ixx="0.000125137029104926" ixy="-5.73608538831083E-21" ixz="-1.2102058455917E-20" iyy="0.000125137029104926" iyz="5.85739039373751E-20" izz="4.43062055973005E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/fanuc_tcp_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/fanuc_tcp_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="fanuc_tcp" type="fixed">
+        <origin xyz="0 0 -0.23503" rpy="3.1416 0 -3.1416" />
+        <parent link="fanuc_link_5" />
+        <child link="fanuc_tcp_link" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <link name="igus_link_1">
+        <inertial>
+            <origin xyz="0.00225137736388654 -0.112868107734947 0.000267746509680311" rpy="0 0 0" />
+            <mass value="23.2409337580365" />
+            <inertia ixx="1.3198392135696" ixy="0.0112033429785408" ixz="-0.000235229419864589" iyy="0.524801714753001" iyz="1.83236120771664E-05" izz="1.32896487553157" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/igus_link_1.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/igus_link_1.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="igus_joint_1" type="prismatic">
+        <origin xyz="0 0.25 0.6399949994999" rpy="-1.5707963267949 0 0" />
+        <parent link="base_link" />
+        <child link="igus_link_1" />
+        <axis xyz="0 0 1" />
+        <limit lower="0" upper="1.58" effort="30" velocity="5" />
+        <dynamics damping="10" friction="2" />
+    </joint>
+    <link name="igus_link_2">
+        <inertial>
+            <origin xyz="0.0645447810752203 1.54356498693886E-08 0.0254765703025249" rpy="0 0 0" />
+            <mass value="2.1853711703453" />
+            <inertia ixx="0.00653349660925282" ixy="-1.02567576389086E-09" ixz="-0.00134367034704273" iyy="0.00891140481161622" iyz="3.25780733272975E-10" izz="0.00686377414452697" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/igus_link_2.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/igus_link_2.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="igus_joint_2" type="prismatic">
+        <origin xyz="-0.0329999999999999 -0.265 0" rpy="-1.5707963267949 0 3.14159265358979" />
+        <parent link="igus_link_1" />
+        <child link="igus_link_2" />
+        <axis xyz="0 0 1" />
+        <limit lower="0" upper="0.47" effort="30" velocity="5" />
+        <dynamics damping="10" friction="2" />
+    </joint>
+    <link name="igus_link_3">
+        <inertial>
+            <origin xyz="3.54830356430469E-07 0.169256452833365 -0.0566033862412991" rpy="0 0 0" />
+            <mass value="3.48880009338367" />
+            <inertia ixx="0.0413943358951059" ixy="4.27505728510597E-08" ixz="-3.33131356621195E-08" iyy="0.00261997668960604" iyz="-0.000800464183175295" izz="0.0421873194928277" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/igus_link_3.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/igus_link_3.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="igus_joint_3" type="revolute">
+        <origin xyz="0.15 0 0.073" rpy="0 0 -1.5707963267949" />
+        <parent link="igus_link_2" />
+        <child link="igus_link_3" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-2.6" upper="2.6" effort="30" velocity="5" />
+        <dynamics damping="1" friction="0.3" />
+    </joint>
+    <link name="igus_link_4">
+        <inertial>
+            <origin xyz="-7.43769490441082E-11 0.0845322630409551 0.0173248307426792" rpy="0 0 0" />
+            <mass value="1.3957668907099" />
+            <inertia ixx="0.00635958656880693" ixy="5.32372633492493E-12" ixz="1.64081104076097E-12" iyy="0.000775912136530914" iyz="-8.21779946052231E-05" izz="0.00691571714765176" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/igus_link_4.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/igus_link_4.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="igus_joint_4" type="revolute">
+        <origin xyz="0 0.3 -0.12" rpy="0 0 0" />
+        <parent link="igus_link_3" />
+        <child link="igus_link_4" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-2.6" upper="2.6" effort="30" velocity="5" />
+        <dynamics damping="1" friction="0.3" />
+    </joint>
+    <link name="igus_link_5">
+        <inertial>
+            <origin xyz="-6.66133814775094E-16 -1.11022302462516E-16 0.04251301631378" rpy="0 0 0" />
+            <mass value="0.119924801763647" />
+            <inertia ixx="4.35856026037314E-05" ixy="-1.19027154243318E-22" ixz="-5.76049351885102E-22" iyy="4.35856026037314E-05" iyz="1.65147717778908E-22" izz="3.12984122546154E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/igus_link_5.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/igus_link_5.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="igus_joint_5" type="revolute">
+        <origin xyz="0 0.17 -0.0579999999999999" rpy="0 0 0" />
+        <parent link="igus_link_4" />
+        <child link="igus_link_5" />
+        <axis xyz="0 0 1" />
+        <limit lower="-2.6" upper="2.6" effort="30" velocity="5" />
+        <dynamics damping="1" friction="0.3" />
+    </joint>
+    <link name="igus_tcp_link">
+        <inertial>
+            <origin xyz="1.11022302462516E-15 -2.22044604925031E-16 -0.10166425759859" rpy="0 0 0" />
+            <mass value="0.105374291184522" />
+            <inertia ixx="0.000299483023425774" ixy="3.29960407079362E-08" ixz="-9.15749901441764E-18" iyy="0.000299567601251221" iyz="3.54086039196301E-19" izz="1.09548565887698E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/igus_tcp_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/igus_tcp_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="igus_tcp" type="fixed">
+        <origin xyz="0 0 -0.14" rpy="3.1416 0 0" />
+        <parent link="igus_link_5" />
+        <child link="igus_tcp_link" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <link name="conveyor_base_link">
+        <inertial>
+            <origin xyz="0.000205458532829161 -0.233664523976159 1.66036818611012" rpy="0 0 0" />
+            <mass value="361.319412074189" />
+            <inertia ixx="1701.89099748382" ixy="0.0329547825602022" ixz="0.000131101954223107" iyy="1694.83001019083" iyz="0.0341512066917525" izz="15.8947693555848" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/conveyor_base_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/conveyor_base_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="conveyor_base_joint" type="fixed">
+        <origin xyz="-0.454993826214242 -0.160006315700161 0.699558083804378" rpy="1.5707963267949 0 -3.14159265358979" />
+        <parent link="base_link" />
+        <child link="conveyor_base_link" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <link name="rim_link_1">
+        <inertial>
+            <origin xyz="-7.03428214310353E-06 0.0389349348531741 -7.20322989544719E-06" rpy="0 0 0" />
+            <mass value="5.19028572574299" />
+            <inertia ixx="0.0410441243862862" ixy="1.43540662939147E-06" ixz="6.3148605362399E-06" iyy="0.104690499200996" iyz="1.4723398094777E-06" izz="0.0895179437175309" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/rim_link_1.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/rim_link_1.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="rim_joint_1" type="prismatic">
+        <origin xyz="0 0 1.2" rpy="0 0 0" />
+        <parent link="conveyor_base_link" />
+        <child link="rim_link_1" />
+        <axis xyz="0 0 1" />
+        <limit lower="0" upper="3.5" effort="30" velocity="5" />
+        <dynamics damping="10" friction="2" />
+    </joint>
+    <link name="rim_link_2">
+        <inertial>
+            <origin xyz="-7.03422069059378E-06 0.0389349337651749 -7.20294907230468E-06" rpy="0 0 0" />
+            <mass value="5.19028566472158" />
+            <inertia ixx="0.0410441242165912" ixy="1.43539106367649E-06" ixz="6.31484982772229E-06" iyy="0.104690498748233" iyz="1.4723236302381E-06" izz="0.0895179434115382" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/rim_link_2.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/rim_link_2.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="rim_joint_2" type="prismatic">
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <parent link="conveyor_base_link" />
+        <child link="rim_link_2" />
+        <axis xyz="0 0 1" />
+        <limit lower="0" upper="3.5" effort="30" velocity="5" />
+        <dynamics damping="10" friction="2" />
+    </joint>
+    <link name="rim_link_3">
+        <inertial>
+            <origin xyz="-7.03392032791461E-06 0.0408393473891693 -7.20272708365499E-06" rpy="0 0 0" />
+            <mass value="5.19028565852553" />
+            <inertia ixx="0.0410441241044068" ixy="1.43536365244892E-06" ixz="6.31480637847164E-06" iyy="0.104690498634122" iyz="1.47229932975299E-06" izz="0.0895179434048661" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/rim_link_3.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/rim_link_3.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="rim_joint_3" type="prismatic">
+        <origin xyz="0 -0.0019044 -1.2" rpy="0 0 0" />
+        <parent link="conveyor_base_link" />
+        <child link="rim_link_3" />
+        <axis xyz="0 0 1" />
+        <limit lower="0" upper="3.5" effort="30" velocity="5" />
+        <dynamics damping="10" friction="2" />
+    </joint>
+    <!--<link name="hmi_link">
+        <inertial>
+            <origin xyz="-0.0041652262336801 0.000244991557230678 0.754188036876293" rpy="0 0 0" />
+            <mass value="13.7245183352948" />
+            <inertia ixx="2.53951208402466" ixy="9.19547727236434E-05" ixz="0.0325319812828774" iyy="2.49398835066015" iyz="-0.000870701051642594" izz="0.0784248473297592" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/hmi_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/hmi_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="hmi_link" type="fixed">
+        <origin xyz="0.845 3.33 0" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="hmi_link" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <link name="fence_link">
+        <inertial>
+            <origin xyz="-6.12048966286416E-07 -2.21500879852693 0.837575521349999" rpy="0 0 0" />
+            <mass value="12.7155389476695" />
+            <inertia ixx="7.61071679293418" ixy="5.73337069646924E-06" ixz="5.39039337816125E-06" iyy="3.80763443329767" iyz="-2.4064595485788E-05" izz="3.80390317753827" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/fence_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_station/meshes/fence_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="fence_link" type="fixed">
+        <origin xyz="0.545 3.205 0" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="fence_link" />
+        <axis xyz="0 0 0" />
+    </joint>-->
+    <transmission name="trans_fanuc_joint_1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="fanuc_joint_1">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="fanuc_joint_1_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_fanuc_joint_2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="fanuc_joint_2">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="fanuc_joint_2_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_fanuc_joint_3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="fanuc_joint_3">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="fanuc_joint_3_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_fanuc_joint_4">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="fanuc_joint_4">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="fanuc_joint_4_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_fanuc_joint_5">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="fanuc_joint_5">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="fanuc_joint_5_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_igus_joint_1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="igus_joint_1">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="igus_joint_1_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_igus_joint_2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="igus_joint_2">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="igus_joint_2_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_igus_joint_3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="igus_joint_3">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="igus_joint_3_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_igus_joint_4">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="igus_joint_4">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="igus_joint_4_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_igus_joint_5">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="igus_joint_5">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="igus_joint_5_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_rim_joint_1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="rim_joint_1">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="rim_joint_1_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_rim_joint_2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="rim_joint_2">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="rim_joint_2_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_rim_joint_3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="rim_joint_3">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="rim_joint_3_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+    <gazebo>
+      <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+      <jointName> fanuc_joint_1, fanuc_joint_2, fanuc_joint_3, fanuc_joint_4, fanuc_joint_5, igus_joint_1, igus_joint_2, igus_joint_3, igus_joint_4, igus_joint_5, rim_joint_1, rim_joint_2, rim_joint_3 </jointName>
+      </plugin>
+    </gazebo>
+</robot>
+

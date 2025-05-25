@@ -1,0 +1,40 @@
+controller_list:
+  - name: fake_igus_robot_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - igus_joint_1
+      - igus_joint_2
+      - igus_joint_3
+      - igus_joint_4
+      - igus_joint_5
+  - name: fake_fanuc_robot_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - fanuc_joint_1
+      - fanuc_joint_2
+      - fanuc_joint_3
+      - fanuc_joint_4
+      - fanuc_joint_5
+  - name: fake_rim_conveyor_1_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - rim_joint_1
+  - name: fake_rim_conveyor_2_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - rim_joint_2
+  - name: fake_rim_conveyor_3_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - rim_joint_3
+initial:  # Define initial robot poses per group
+  - group: igus_robot_arm
+    pose: home_pose
+  - group: fanuc_robot_arm
+    pose: home_pose
+  - group: rim_conveyor_1
+    pose: home_pose
+  - group: rim_conveyor_2
+    pose: home_pose
+  - group: rim_conveyor_3
+    pose: home_pose

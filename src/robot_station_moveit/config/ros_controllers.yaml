@@ -1,0 +1,98 @@
+igus_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - igus_joint_1
+    - igus_joint_2
+    - igus_joint_3
+    - igus_joint_4
+    - igus_joint_5
+  gains:
+    igus_joint_1:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    igus_joint_2:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    igus_joint_3:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    igus_joint_4:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    igus_joint_5:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+fanuc_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - fanuc_joint_1
+    - fanuc_joint_2
+    - fanuc_joint_3
+    - fanuc_joint_4
+    - fanuc_joint_5
+  gains:
+    fanuc_joint_1:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    fanuc_joint_2:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    fanuc_joint_3:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    fanuc_joint_4:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    fanuc_joint_5:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+rim_1_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - rim_joint_1
+  gains:
+    rim_joint_1:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+rim_2_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - rim_joint_2
+  gains:
+    rim_joint_2:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+rim_3_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - rim_joint_3
+  gains:
+    rim_joint_3:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
