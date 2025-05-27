@@ -95,12 +95,12 @@ class demo_robot:
             True     # avoid_collisions (bei deiner MoveIt-Version)
         )
         print(f"Kreisplanung: {fraction*100:.1f}% Pfad gefunden")
-
-        if fraction > 0.99:
-            self.move_group.execute(plan, wait=True)
-            print("Kreisbewegung ausgeführt!")
-        else:
-            print("Achtung: Pfad konnte nicht komplett geplant werden.")
+        self.move_group.execute(plan, wait=True)
+        #if fraction > 0.99:
+        #    self.move_group.execute(plan, wait=True)
+        #    print("Kreisbewegung ausgeführt!")
+        #else:
+        #    print("Achtung: Pfad konnte nicht komplett geplant werden.")
 
         self.move_group.stop()
         self.move_group.clear_pose_targets()
