@@ -82,11 +82,20 @@
     <group_state name="home_pose" group="rim_conveyor_1">
         <joint name="rim_joint_1" value="0"/>
     </group_state>
+    <group_state name="robot_2_pose" group="rim_conveyor_1">
+        <joint name="rim_joint_1" value="1.2"/>
+    </group_state>
     <group_state name="finish_pose" group="rim_conveyor_1">
         <joint name="rim_joint_1" value="3.5"/>
     </group_state>
     <group_state name="home_pose" group="rim_conveyor_2">
         <joint name="rim_joint_2" value="0"/>
+    </group_state>
+    <group_state name="robot_1_pose" group="rim_conveyor_2">
+        <joint name="rim_joint_2" value="1.2"/>
+    </group_state>
+    <group_state name="robot_2_pose" group="rim_conveyor_2">
+        <joint name="rim_joint_2" value="2.4"/>
     </group_state>
     <group_state name="finish_pose" group="rim_conveyor_2">
         <joint name="rim_joint_2" value="3.5"/>
@@ -94,8 +103,11 @@
     <group_state name="home_pose" group="rim_conveyor_3">
         <joint name="rim_joint_3" value="0"/>
     </group_state>
+    <group_state name="robot_1_pose" group="rim_conveyor_3">
+        <joint name="rim_joint_3" value="2.4"/>
+    </group_state>
     <group_state name="finish_pose" group="rim_conveyor_3">
-        <joint name="rim_joint_3" value="3.5"/>
+        <joint name="rim_joint_3" value="3.6"/>
     </group_state>
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
     <virtual_joint name="FixedLinkToWorld" type="fixed" parent_frame="world" child_link="base_link"/>

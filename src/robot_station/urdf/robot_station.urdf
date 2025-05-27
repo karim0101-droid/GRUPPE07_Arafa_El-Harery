@@ -86,7 +86,7 @@
         <parent link="fanuc_base_link" />
         <child link="fanuc_link_1" />
         <axis xyz="0 0 1" />
-        <limit lower="-3.14" upper="3.14" effort="30" velocity="5" />
+        <limit lower="-3.14" upper="3.14" effort="3000" velocity="5" />
         <dynamics damping="1" friction="0.3" />
     </joint>
     <link name="fanuc_link_2">
@@ -116,7 +116,7 @@
         <parent link="fanuc_link_1" />
         <child link="fanuc_link_2" />
         <axis xyz="0 0 1" />
-        <limit lower="-3.14" upper="3.14" effort="30" velocity="5" />
+        <limit lower="-3.14" upper="3.14" effort="3000" velocity="5" />
         <dynamics damping="1" friction="0.3" />
     </joint>
     <link name="fanuc_link_3">
@@ -146,7 +146,7 @@
         <parent link="fanuc_link_2" />
         <child link="fanuc_link_3" />
         <axis xyz="0 0 -1" />
-        <limit lower="-3.14" upper="3.14" effort="30" velocity="5" />
+        <limit lower="-3.14" upper="3.14" effort="3000" velocity="5" />
         <dynamics damping="1" friction="0.3" />
     </joint>
     <link name="fanuc_link_4">
@@ -176,7 +176,7 @@
         <parent link="fanuc_link_3" />
         <child link="fanuc_link_4" />
         <axis xyz="0 0 1" />
-        <limit lower="-3.14" upper="3.14" effort="30" velocity="5" />
+        <limit lower="-3.14" upper="3.14" effort="3000" velocity="5" />
         <dynamics damping="1" friction="0.3" />
     </joint>
     <link name="fanuc_link_5">
@@ -206,7 +206,7 @@
         <parent link="fanuc_link_4" />
         <child link="fanuc_link_5" />
         <axis xyz="0 0 -1" />
-        <limit lower="-3.14" upper="3.14" effort="30" velocity="5" />
+        <limit lower="-3.14" upper="3.14" effort="300" velocity="5" />
         <dynamics damping="1" friction="0.3" />
     </joint>
     <link name="fanuc_tcp_link">
@@ -264,7 +264,7 @@
         <parent link="base_link" />
         <child link="igus_link_1" />
         <axis xyz="0 0 1" />
-        <limit lower="0" upper="1.58" effort="30" velocity="5" />
+        <limit lower="0" upper="1.58" effort="3000" velocity="5" />
         <dynamics damping="10" friction="2" />
     </joint>
     <link name="igus_link_2">
@@ -294,7 +294,7 @@
         <parent link="igus_link_1" />
         <child link="igus_link_2" />
         <axis xyz="0 0 1" />
-        <limit lower="0" upper="0.47" effort="30" velocity="5" />
+        <limit lower="0" upper="0.47" effort="3000" velocity="5" />
         <dynamics damping="10" friction="2" />
     </joint>
     <link name="igus_link_3">
@@ -324,7 +324,7 @@
         <parent link="igus_link_2" />
         <child link="igus_link_3" />
         <axis xyz="0 0 -1" />
-        <limit lower="-2.6" upper="2.6" effort="30" velocity="5" />
+        <limit lower="-2.6" upper="2.6" effort="3000" velocity="5" />
         <dynamics damping="1" friction="0.3" />
     </joint>
     <link name="igus_link_4">
@@ -354,7 +354,7 @@
         <parent link="igus_link_3" />
         <child link="igus_link_4" />
         <axis xyz="0 0 -1" />
-        <limit lower="-2.6" upper="2.6" effort="30" velocity="5" />
+        <limit lower="-2.6" upper="2.6" effort="3000" velocity="5" />
         <dynamics damping="1" friction="0.3" />
     </joint>
     <link name="igus_link_5">
@@ -384,7 +384,7 @@
         <parent link="igus_link_4" />
         <child link="igus_link_5" />
         <axis xyz="0 0 1" />
-        <limit lower="-2.6" upper="2.6" effort="30" velocity="5" />
+        <limit lower="-2.6" upper="2.6" effort="3000" velocity="5" />
         <dynamics damping="1" friction="0.3" />
     </joint>
     <link name="igus_tcp_link">
@@ -470,7 +470,7 @@
         <parent link="conveyor_base_link" />
         <child link="rim_link_1" />
         <axis xyz="0 0 1" />
-        <limit lower="0" upper="3.5" effort="30" velocity="5" />
+        <limit lower="0" upper="3.5" effort="3000" velocity="5" />
         <dynamics damping="10" friction="2" />
     </joint>
     <link name="rim_link_2">
@@ -500,7 +500,7 @@
         <parent link="conveyor_base_link" />
         <child link="rim_link_2" />
         <axis xyz="0 0 1" />
-        <limit lower="0" upper="3.5" effort="30" velocity="5" />
+        <limit lower="0" upper="3.5" effort="3000" velocity="5" />
         <dynamics damping="10" friction="2" />
     </joint>
     <link name="rim_link_3">
@@ -530,7 +530,7 @@
         <parent link="conveyor_base_link" />
         <child link="rim_link_3" />
         <axis xyz="0 0 1" />
-        <limit lower="0" upper="3.5" effort="30" velocity="5" />
+        <limit lower="0" upper="3.6" effort="3000" velocity="5" />
         <dynamics damping="10" friction="2" />
     </joint>
     <!--<link name="hmi_link">
@@ -730,4 +730,3 @@
       </plugin>
     </gazebo>
 </robot>
-
